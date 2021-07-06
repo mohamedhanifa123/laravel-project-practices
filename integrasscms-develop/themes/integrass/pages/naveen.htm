@@ -1,0 +1,44 @@
+title = "Naveen"
+url = "/about/team/naveen"
+layout = "default"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<section id="leadership-banner" class="wow fadeIn">
+        <div class="container text-left">
+            <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Our Team</h2>            
+        </div>
+    </section><!-- #call-to-action -->
+<div class="container-fluid">
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{url('/about')}}" title="About us"> About Us</a></li>
+                    <li class="breadcrumb-item"><a href="{{url('/company/team')}}" title="Our Team"> Our Team</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Naveen</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Breadcrumps End -->
+    <div class="container-fluid">
+        <div class="container">
+            <div class="bg-white ">
+             <header class="section-header mb-5">
+                    <h3 class="text-center"> Naveen</h3>
+                    <div class="text-center">UNIX /LSF/ Vormetric Administrator</div>
+                </header>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="text-justify letter-spacing-5 animated fadeInDown">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p class="text-justify letter-spacing-5 animated fadeInDown">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                    </div>
+                    {% partial 'site/about-sec' img='assets/img/leadership/leadership-inner.jpg'|theme alt="Leadership"  %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% partial 'site/calltoaction' %}

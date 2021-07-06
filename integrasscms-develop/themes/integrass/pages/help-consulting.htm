@@ -1,0 +1,121 @@
+title = "consulting"
+url = "/how-we-help/consulting"
+layout = "default"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<section id="consulting-banner" class="wow fadeIn">
+    <div class="container text-left">
+        <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Embracing Digital Disruption and Digital
+            Transformation</h2>
+        <!---<p class="text-capitalize letter-spacing-1 text-white">strategize • execute • manage</p>-->
+    </div>
+</section><!-- #call-to-action -->
+<div class="container-fluid">
+    <div class="container mt-2">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="javascript:void(0)"
+                                                                   title="Solutions">How We Help</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Consulting</li>
+
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Breadcrumps End -->
+<section id="portfolio" class="consulting_row">
+    <div class="container">
+        <header class="section-header">
+            <h3>Consulting</h3>
+        </header>
+        <div class="bg-white mb-5">
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="text-justify letter-spacing-5 animated fadeInDown">Enterprises are turning to digital
+                        technologies to connect with a wider audience, enhance customer experience and improve
+                        transactions. Integrass Consulting Services offers next generation architecture to
+                        drive efficiency and help enterprise to build adaptable platforms with cloud first approach.</p>
+                    <p class="text-justify letter-spacing-5 animated fadeInDown"><strong><h4>Capabilities</h4></strong>
+                        We meet every challenge with innovation to transform core business.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-4 col-12  portfolio-item filter-app wow fadeInUp"
+                             data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <figure class="text-center">
+                                    <img src="{{ 'assets/img/application-services.png'|theme }}" width="100"
+                                         height="100"
+                                         class="img-fluid"
+                                         alt="Application
+                                            Services">
+                                </figure>
+
+                                <div class="portfolio-info">
+                                    <div class="buttoncontainer text-center mt-3 mb-3">
+                                        <button class="signup-btn"
+                                                onclick=window.location.href="{{url('solutions/application-services')}}">
+                                            Application
+                                            Services
+                                        </button>
+                                    </div>
+                                    <a href="{{url('contact-inquiry')}}">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-12 portfolio-item filter-app wow fadeInUp"
+                             data-wow-delay="0.2s">
+                            <div class="portfolio-wrap">
+                                <figure class="text-center">
+                                    <img src="{{ 'assets/img/cloud-computing.png'|theme }}" width="100"
+                                         height="100"
+                                         class="img-fluid"
+                                         alt="Cloud
+                                Services">
+                                </figure>
+
+                                <div class="portfolio-info">
+                                    <div class="buttoncontainer text-center mt-3 mb-3">
+                                        <button class="signup-btn"
+                                                onclick=window.location.href="{{url('solutions/cloud-services')}}">
+                                            Cloud
+                                            Services
+                                        </button>
+                                    </div>
+                                    <a href="{{url('contact-inquiry')}}">Learn More</a>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <p class="text-justify letter-spacing-5 animated fadeInDown"><strong><h4>Consulting
+                        Services & Solutions Value
+                    </h4></strong>
+                    </p>
+                    <ol class="list-style-disc ml-3 fnt-13">
+                        <li>Global talent pool of 110+ consultants</li>
+                        <li>Serving 75+ clients</li>
+                        <li>On-demand access to certified professionals in areas of emerging technologies</li>
+                        <li>On/Off-site support with fast ramp-up times</li>
+                        <li>Hourly contracts that eliminate the search for and expense of an unnecessary full-time
+                            employee when you don’t need one
+                        </li>
+                        <li>Scalability to meet your fluctuating resources needs</li>
+                        <li>Flexible engagement models</li>
+                        <li>Labor cost savings realized through Integrass economy of scale</li>
+                        <li>Faster product development and time to market</li>
+                        <li>Expertise in all major industry segments</li>
+                        <li>Recipient of multiple industry awards</li>
+                    </ol>
+                </div>
+                {% partial 'site/solutions-sec' img='assets/img/smart_sourcing.jpg'|theme alt="About" %}
+            </div>
+        </div>
+    </div>
+</section>
+{% partial 'site/calltoaction' %}

@@ -1,0 +1,70 @@
+title = "Blog Post"
+url = "/blog/post/:slug"
+layout = "blog"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[siteSearchInclude]
+
+[ssbuttons share]
+fa = "maxcdn"
+js = 0
+twitter = 1
+facebook = 1
+google+ = 1
+stumbleupon = 0
+linkedin = 1
+order_twitter = 1
+order_facebook = 2
+order_google+ = 3
+order_stumbleupon = 4
+order_linkedin = 5
+
+[commentsPost]
+==
+<section id="blog-banner" class="wow fadeIn">
+        <div class="container text-left">
+            <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">
+                {% if post %}
+                {{ post.title }}                
+                    {% component 'currentCategorySlug ' %}
+                {% else %}
+                    {% component 'currentCategorySlug ' %}
+                {% endif %}
+            </h2>              
+        </div>
+    </section><!-- #call-to-action -->
+<div class="container-fluid">
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>  
+                    <li class="breadcrumb-item"><a href="{{url('/blog')}}">Blog</a></li>  
+                    <li class="breadcrumb-item active" aria-current="page">Post</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% component 'blogPost' %}
+                </div> 
+                <div class="col-md-12">
+                    {% component 'commentsPost' %}
+                </div> 
+                <div class="row mt-2 mb-4">
+                    {% component 'share' %}
+                </div>
+            </div>
+        </div>
+    </div>

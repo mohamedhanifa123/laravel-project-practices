@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "laravel-frontend-presets/tailwindcss": "^4.3"
+    },
+    "require": {
+        "laravel/jetstream": "^2.3"
+    }
+}

@@ -1,0 +1,48 @@
+==
+<section id="call-to-action" class="wow fadeIn">
+        <div class="container text-center">
+            <h4 class="text-white">{{link}}</h4>            
+            <!--<a class="cta-btn schedule-a-meeting" href="javascript:void(0)" title="Schedule a Meeting">Schedule a
+                Meeting</a>-->
+                <!--Modal Start-->
+                <style>
+                
+                @media (min-width:576px){.modal-dialog{max-width:1100px;margin:1.75rem auto}.modal-dialog-centered{min-height:calc(100% - (1.75rem * 2))}.modal-sm{max-width:300px}}
+                
+                </style>
+                
+                <!-- Button trigger modal -->
+<a href="javascript:void(0);" type="button" class="cta-btn" data-toggle="modal" data-target="#exampleModal">
+  Schedule a Meeting
+</a>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Schedule a Meeting</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/integrass/30min" style="position: relative;min-width:320px;height:750px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        <!-- Calendly inline widget end -->
+        
+      </div>
+      <!--<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>-->
+    </div>
+  </div>
+</div>
+                
+                
+                <!--Modal End-->
+        </div>
+    </section><!-- #call-to-action -->

@@ -1,0 +1,50 @@
+title = "blog"
+url = "/blog"
+layout = "blog"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[siteSearchInclude]
+==
+<section id="blog-banner" class="wow fadeIn">
+        <div class="container text-left">
+            <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Blog</h2>            
+        </div>
+    </section><!-- #call-to-action -->
+<div class="container-fluid">
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>                    
+                    <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 img-blog">
+                    {% component 'blogPosts' %}
+                </div>
+                <div class="col-md-4">
+                    <div class="project-details-info">
+                        {% component 'blogCategories' %}    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

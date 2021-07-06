@@ -1,0 +1,212 @@
+==
+<div class="footer-top">
+    <div class="container-fluid">
+        <div class="row pl-lg-4 pr-xl-4">
+            <div class="col-lg-2 col-md-6 footer-links col-6">
+                <h4>Integrass</h4>
+                <p class="text-left fnt-12">Integrass creates the competitive advantage for organizations around the
+                    world by implementing customized, end-to-end IT solutions that achieve business success, leveraging
+                    leading technology platforms in global delivery model.</p>
+
+            </div>
+            <div class="col-lg-2 col-md-6 footer-links col-6">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="{{url('/company/team')}}" title="Team">Leadership</a></li>
+                    <li><a href="{{url('company/awards-recognitions')}}" title="Awards & Recognitions">Awards & Recognitions</a>
+                    </li>
+                    <li><a href="{{url('/company/partners')}}" title="Partners">Partners</a></li>
+                    <li><a href="{{url('/about/careers')}}" title="Careers">Careers</a></li>
+                    <li><a href="{{url('/contact')}}" title="Contact Us">Contact Us</a></li>
+                    <!-- <li><a href="{{url('/blog')}}" title="Blog">Blog</a></li> -->
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links col-6">
+                <h4>How We Help</h4>
+                <ul>
+                    <li><a href="{{url('how-we-help/consulting')}}"
+                           title="Consulting">
+                        Consulting
+                    </a></li>
+                    <li><a href="{{url('how-we-help/solutions')}}"
+                           title="Solutions">
+                        Solutions
+                    </a></li>
+                    <li>
+                        <a href="{{url('how-we-help/sports')}}"
+                           title="Sports">Sports</a>
+                    </li>
+                    <li><a href="{{url('how-we-help/managed-services')}}"
+
+                           title="Managed Services">Managed Services</a>
+                    </li>
+                                       
+                </ul>
+            </div>
+            <div class="col-lg-1 col-md-6 footer-links col-6">
+                <h4>Insights</h4>
+                <ul>
+
+                    <li>
+                        <a href="{{url('insights/news')}}"
+                           title="News">News</a>
+
+                    </li>
+                    <li>
+                        <a href="{{url('insights/hot-topics')}}"
+                           title="Hot Topics">Hot Topics</a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('insights/videos')}}"
+                           title="Videos">Videos
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links col-6">
+                <h4>Technology Competency</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul>
+                            <li>Open Source</li>
+                            <li>Java / J2EE</li>
+                            <li>Net & SQL Server</li>
+                            <li>PhoneGap</li>
+                            <li>Xamarin</li>
+                            <li>WebSphere</li>
+                            <li>LAMP Stack</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li>Alfresco</li>
+                            <li>Mulesoft</li>
+                            <li>Magento</li>
+                            <li>Drupal</li>
+                            <li>Liferay</li>
+                            <li>Moodle</li>
+                            <li>MEAN Stack</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li>SalesForce</li>
+                            <li>WordPress</li>
+                            <li>Elastic Search</li>
+                            <li>AWS, Azure</li>
+                            <li>Selenium</li>
+                            <li>Oracle</li>
+                            <li>Angular JS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-12 footer-newsletter col-12">
+                <h4>Our Newsletter</h4>
+                <p class="green-text fnt-13 success-msg"><strong></strong></p>
+                <form action="{{url('/newsletter')}}" method="post" id="news-letter" onsubmit="return newsletter();">
+                    <input type="text" name="name" class="mb-3 col-12 name-text" placeholder="Name" required>
+                    <input type="email" name="email" class="mb-3 email-text" placeholder="Email" required>
+                    <input type="submit" value="Sign Up">
+                </form>
+                <div class="clearfix"></div>
+                <div class="social-links mt-4">
+                    <a href="https://www.facebook.com/IntegrassGlobalCompany/" target="_blank" class="facebook"><i
+                            class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/Integrass1" target="_blank" title="https://twitter.com/abmcgllc"
+                       class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UC7p9mJIfpjkvdSkGXgdIcbA" target="_blank" class="youtube"><i
+                            class="fa fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/integrassglobal/" target="_blank" class="facebook"><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="https://plus.google.com/+Abmcg" target="_blank" title="https://plus.google.com/+Abmcg"
+                       class="google-plus d-none"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://www.linkedin.com/company/integrass-global"
+                       target="_blank"
+                       title="https://www.linkedin.com/company/integrass-global"
+                       class="linkedin"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row pl-lg-4 pr-xl-4">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3">
+                        <a href="https://consulting.integrass.com/" target="_blank"> <img
+                                src="{{ 'assets/img/products_logs/int_con_ft.png'|theme }}"
+                                alt="Integrass Consulting"
+                                class="img-fluid ml-md-3 ml-0"/></a>
+                    </div>
+                    <div class="col-sm-12 col-md-3 ml-m-24">
+                        <a href="https://sports.integrass.com/" target="_blank"> <img
+                                src="{{ 'assets/img/products_logs/int_sports_ft.png'|theme }}" alt="Integrass Sports"
+                                class="img-fluid ml-md-3 ml-0 "/></a>
+                    </div>
+                    <div class="col-sm-12 col-md-3 ml-m-7">
+                        <a href="https://virtualops.integrass.com/" target="_blank"> <img
+                                src="{{ 'assets/img/products_logs/int_vops_ft.png'|theme }}"
+                                alt="Integrass VirutalOps" class="img-fluid ml-md-3 ml-0"/></a>
+                    </div>
+
+                    <div class="col-sm-12 col-md-3 ml-m-7">
+                        <a href="https://virtualops.integrass.com/" target="_blank"> <img
+                                src="{{ 'assets/img/products_logs/int_sol_ft.png'|theme }}"
+                                alt="Integrass VirutalOps" class="img-fluid ml-md-3 ml-0"/></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-5 mt-sm-2">
+
+                <div class="d-flex flex-row-reverse">
+                    <div class="col-sm-12 col-md-2">
+                        <a href="https://www.e-verify.gov/" title="https://www.e-verify.gov/" target="_blank"><img
+                                src="{{ 'assets/img/e-verify1.png'|theme }}" alt="Integrass Services"
+                                class="img-fluid "/></a>
+                    </div>
+                    <div class="col-sm-12  col-md-2">
+                        <img src="{{ 'assets/img/nmsdc_ft.png'|theme }}" alt="Integrass Services"
+                             class="img-fluid ml-md-3 mt-md-0 "/>
+                    </div>
+                    <div class="col-sm-12  col-md-2">
+                        <img src="{{ 'assets/img/wbenc_ft.png'|theme }}" alt="Integrass Services"
+                             class="img-fluid ml-md-3 ml-0"/>
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+</div>
+
+<div class="container-fluid">
+    <div class="row pl-lg-4 pr-xl-5 mt-3">
+        <div class="col-md-6 col-12 col-xl-6 col-lg-6">
+            <div class="copyright float-left fnt-10">
+               Copyright &copy;<script>document.write(new Date().getFullYear())</script> Integrass LLC. All rights reserved.
+               <!--Integrass LLC. &copy; Copyright <script>document.write(new Date().getFullYear())</script>.--> 
+                <!--Copyright © <script>document.write(new Date().getFullYear())</script> Across Borders Management Consulting Group LLC dba Integrass. All Rights Reserved-->
+            </div>
+        </div>
+        <div class="col-md-6 col-12 col-xl-6 col-lg-6">
+            <div class="copyright float-lg-right float-md-right float-sm-left text-sm-left">
+                <span><a href="{{url('/terms-use')}}" class="text-white" title="Terms of Use">Terms of Use |</a> </span>
+                <span><a href="{{url('/privacy-policy')}}" class="text-white"
+                         title="Privacy Policy">Privacy Policy |</a> </span>
+                <span><a href="{{url('/sitemap')}}" class="text-white" title="Sitemap">Sitemap </a> </span>
+            </div>
+        </div>
+    </div>
+</div>

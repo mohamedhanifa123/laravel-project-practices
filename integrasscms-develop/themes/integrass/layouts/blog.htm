@@ -1,0 +1,56 @@
+description = "blog"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Integrass - {{ this.page.title }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+     <meta name="googlebot" content="index,follow,snippet,archive">    
+    <meta name="robots" content="noindex"/>
+    <meta name="keywords"
+          content="Application,Cloud,Automation,Mobility,ECM & DMS,Product  Engineering,Assurance & Testing,Data Analytics,Smart Sourcing,Open Source,Java / J2EE,Net & SQL Server,PhoneGap,Xamarin,WebSphere,Alfresco,Mulesoft,Magento,Drupal,Liferay,Moodle,SalesForce,WordPress,Elastic Search,Selenium">    
+    <meta name="description" content="Integrass,India,Australia,United States Of America,Middle East,Africa,Asia,Across Border,ABMCG {{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="Integrass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Integrass">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700"
+          rel="stylesheet">
+    <link rel="icon"  href="{{ 'assets/img/favicon.ico'|theme }}">
+    <link href="{{ 'assets/lib/bootstrap/css/bootstrap.min.css'|theme }}" rel="stylesheet">    
+    <link href="{{ 'assets/lib/animate/animate.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/ionicons/css/ionicons.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/owlcarousel/assets/owl.carousel.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/lightbox/css/lightbox.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+    <link href="{{ url('/plugins/taras/comments/assets/css/comments.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<header id="header">
+    {% partial 'site/header-blog' %}
+</header>
+<!-- Content -->
+
+    {% page %}
+
+
+<!-- Footer -->
+<footer id="footer">
+    {% partial 'site/footer-blog' %}
+</footer>
+<!-- Scripts -->
+<script src="{{ 'assets/lib/jquery/jquery.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/jquery/jquery-migrate.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/bootstrap/js/bootstrap.bundle.min.js'|theme }}"></script>
+<script src="{{ url('/plugins/taras/comments/assets/js/comments.js') }}"></script>
+<!--<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>-->
+{% framework %}
+<script>
+    $( document ).ready(function() {
+        $('.img-blog img').addClass('img-fluid');
+    });
+</script>
+</body>
+</html>

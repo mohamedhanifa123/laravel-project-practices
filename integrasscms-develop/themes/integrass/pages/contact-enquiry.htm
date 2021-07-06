@@ -1,0 +1,163 @@
+title = " Integrass, Software Consulting, IT Solutions, Continuous Delivery"
+url = "/contact-inquiry"
+layout = "default"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<section id="inquiry-banner" class="wow fadeIn">
+    <div class="container text-left">
+        <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Inquiry </h2>
+        <!---<p class="text-capitalize letter-spacing-1 text-white">strategize • execute • manage</p>-->
+    </div>
+</section><!-- #call-to-action -->
+<div class="container-fluid">
+    <div class="container mt-2">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Inquiry</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Breadcrumps End -->
+<div class="container-fluid">
+    <div class="container">
+        <header class="section-header">
+            <h3>Inquiry</h3>
+        </header>
+        <div class="bg-white ">
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <h2><strong>How can we help you today?</strong>
+                    </h2>
+
+                    <p>Fill in the form and we will get back to you in two working days
+                    </p>
+                    <h4><strong>Sales Inquiry </strong></h4>
+                    <p>If you are considering one of our products, fill in the form. If you need to get in touch
+                        with a sales person right now, call us at (855) 297 7575 </p>
+                    <h4 class="ft-clr mt-3"><strong>Support Inquiry </strong></h4>
+                    <p>If you are a concerned customer and need immediate help, you can visit our support
+                        portal.
+                    </p>
+                    <h4 class="ft-clr mt-3"><strong>Other Inquiry </strong></h4>
+                    <p>Our local office address can be found <strong><a href="{{url('company/offices')}}">here.</a></strong></p>
+                    <p>If you are looking for a partnership with Integrass, please fill in this form.</p>
+                    <p>If you are interested in an exciting career with Integrass Sports, apply <strong> <a
+                            href="{{url('about/careers')}}">here.</a></strong></p>
+
+
+                </div>
+                <div class="col-md-4 section-bg pt-3 pb-3">
+                    <div class="form">
+                        <div id="errormessage"></div>
+                        <h5><strong>Tell us a little about yourself, and we’ll be in touch right away.</strong></h5>
+                        <p>Please fill out all the fields.</p>
+                        <hr>
+                        <div class="alert alert-success mb-3 hide" id="success_message">Thank you for your interest
+                            in towards Integrass, you will be connected shortly on your registered email address /
+                            phone.
+                        </div>
+                        <div class="col-md-12  hide" id="loader_gif">
+                            <div class="loader_gif text-center">
+                                <img src="{{ 'assets/img/integrass-loader.gif'|theme }}" alt="integrass loader"
+                                     class="img-fluid"/></div>
+                        </div>
+                        <form action="{{url('/contact_enquiry')}}" method="post" class="contactForma"
+                              id="contact-enquiry-form">
+                            <div class="form-row">
+
+                                <div class="form-group col-md-12">
+                                    <label>Company Name <span>*</span></label>
+                                    <input type="text" name="company_name" class="form-control" id="company_name"
+                                           required
+                                           placeholder="Company Name"
+                                           data-rule="required" tabindex="1"/>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Full Name <span>*</span></label>
+                                    <input type="text" name="full_name" class="form-control" id="full_name" required
+                                           placeholder="Full Name"
+                                           data-rule="required" tabindex="2"/>
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label>Email <span>*</span></label>
+                                    <input type="email" name="email" class="form-control" id="email" required
+                                           placeholder="Email"
+                                           data-rule="required" tabindex="3"/>
+                                    <div class="validation"></div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label>Phone <span>*</span></label>
+                                    <input type="text" class="form-control" name="phone" required id="phone"
+                                           placeholder="Phone" data-rule="phone"
+                                           onkeypress="return isNumberKey(event)" tabindex="4"/>
+                                    <div class="validation"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" name="message" rows="2"
+                                          data-msg="Please write something for us" placeholder="Message"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Would you to be contacted</label>
+                                <select name="input_select_19" class="form-control" data-mincharacters="0"
+                                        type="select">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            {% if this.environment == 'local' %}
+                            <div class="form-group text-center">
+                                <div class="g-recaptcha" data-sitekey="6LfYkvAUAAAAAEzuftCnjp6ftFa05np6K94VtKIR"></div>
+                                <div class="alert alert-danger hide error-captcha mt-3 mb-3">
+
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if this.environment == 'dev' %}
+                            <div class="form-group text-center">
+                                <div class="g-recaptcha" data-sitekey="6LecnPUUAAAAAI35Ji4JdN32DXUNk_MwN5Ri5LIY"></div>
+                                <div class="alert alert-danger hide error-captcha mt-3 mb-3">
+
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if this.environment == 'staging' %}
+                            <div class="form-group text-center">
+                                <div class="g-recaptcha" data-sitekey="6LcRn_UUAAAAAJHD2c4YCHUxTUkAhbTFcURdWTdp"></div>
+                                <div class="alert alert-danger hide error-captcha mt-3 mb-3">
+
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if this.environment == 'production' %}
+                            <div class="form-group ">
+                                <div class="g-recaptcha" data-sitekey="6LcxqfUUAAAAAM3t22TQZqm0EZk7ZXvsJ6FpC7Ik"></div>
+                                <div class="alert alert-danger hide error-captcha mt-3 mb-3">
+                                </div>
+                            </div>
+                            {% endif %}
+                            <input type="hidden" name="type" value="5"/>
+                            <div class="text-center">
+                                <input type="submit" class="signup-btn contact-enquiry-form p-130" value="Contact Us"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% partial 'site/calltoaction' %}

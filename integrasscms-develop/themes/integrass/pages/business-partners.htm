@@ -1,0 +1,51 @@
+title = "Business Partners"
+url = "/partners/business"
+layout = "default"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<section id="partner-us-banner" class="wow fadeIn">
+        <div class="container text-left">
+            <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Business Partners</h2>
+             <p class=" letter-spacing-1 text-white">Accelerate Business Growth and Increase Profitability</p>
+        </div>
+    </section><!-- #call-to-action -->
+    <!-- Breadcrumps Start -->
+    <div class="container-fluid"> 
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                    <li class="breadcrumb-item"><a href="{{url('/')}}" title="home">Home</a></li>
+                    <li class="breadcrumb-item">Partners</li>
+                    <li class="breadcrumb-item active" aria-current="page">Business Partners</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+     <div class="container-fluid">
+        <div class="container">
+        <header class="section-header">
+                            <h3>Partner with us</h3>
+                        </header>
+            <div class="bg-white ">
+                <div class="row">                    
+                        <div class="container mb-4 mt-3">                             
+                        <div class="row">
+                        <div class="col-md-8">                           
+                    <p>Welcome. We know you will benefit from partnering with Integrass</p>
+                    <p>We are changing the way organizations transform, and we are looking for the right business partners to join us and expand our customer portfolio. Our customers are enjoying amazing success.</p>
+                    <p>Business Partners are critical to our success. We offer Business Partners to create a satisfying and rewarding experience when you choose to work with Integrass.</p>
+                    <p>Integrass Business Partners resell, provide and manage solutions, products & services that extend the business network capabilities of Integrass to expand customers in new markets and strategic account.<p>
+                    <div class="text-center">
+                    <a href="{{url('/partners/register-business-partner')}}" class="home-btn scrollto letter-spacing-1 bg-blue">Apply to Partner</a>
+                                </div>
+                        </div>
+                         {% partial 'site/partner-sec' img='assets/img/integrass-business-partner.jpg'|theme alt="Business Partners" %}
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% partial 'site/calltoaction' %}

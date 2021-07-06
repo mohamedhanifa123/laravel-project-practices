@@ -1,0 +1,290 @@
+[simplegoogleanalytics]
+domain = "auto"
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Integrass - {{ this.page.title }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="google-site-verification" content="ZLmSJc87RNiDbFSwkiteMGrCbOOFRy4IlWjH7a_hDxA"/>
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="robots" content="noindex"/>
+    <meta name="keywords"
+          content="Integrass Sports, Amateur Sports, Certified Woman Owned Business, Grow Sports, Sports Solutions, Sports Technology Services, Member Registration, Events, LMS, Fan Engagement, Data Management, Data Analytics, IT Managed Services, Sports Digital Transformation, Application Development, Software Services, Enterprise Integration, Sports Technology, Continous Delivery">
+    <meta name="description"
+          content="Integrass, End-to-End IT Solutions & Platform Provider, Certified Woman Owned Business, Integrass Consulting, Integrass Sports, Integrass Virtual Ops, Fobess One, Open Source Technology, Continuous Delivery {{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="Integrass">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Integrass">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700"
+          rel="stylesheet">
+    <link rel="icon" href="{{ 'assets/img/favicon.ico'|theme }}">
+    <link href="{{ 'assets/lib/bootstrap/css/bootstrap.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/font-awesome/css/font-awesome.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/animate/animate.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/ionicons/css/ionicons.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/owlcarousel/assets/owl.carousel.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/lib/lightbox/css/lightbox.min.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+
+
+</head>
+<body>
+<!-- <div id="feedback">
+    <a href="{{url('contact-inquiry')}}">Inquiry</a>
+</div> -->
+<!-- Header -->
+<header id="header">
+    {% partial 'site/white-paper-head' %}
+</header>
+{% page %}
+<!-- Footer -->
+<footer id="footer">
+    {% partial 'site/footer' %}
+</footer>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- Scripts -->
+<script src="{{ 'assets/lib/jquery/jquery.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/jquery/jquery-migrate.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/bootstrap/js/bootstrap.bundle.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/easing/easing.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/superfish/hoverIntent.js'|theme }}"></script>
+<script src="{{ 'assets/lib/superfish/superfish.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/wow/wow.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/waypoints/waypoints.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/owlcarousel/owl.carousel.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/isotope/isotope.pkgd.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/lightbox/js/lightbox.min.js'|theme }}"></script>
+<script src="{{ 'assets/lib/touchSwipe/jquery.touchSwipe.min.js'|theme }}"></script>
+<script src="{{ 'assets/contactform/contactform.js'|theme }}"></script>
+<script src="{{ 'assets/js/main.js'|theme }}"></script>
+
+
+<script src="{{ 'assets/js/cookies.js'|theme }}"></script>
+<script src="{{ 'assets/js/lib/stats.js'|theme }}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% if this.environment == 'production' %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115547495-1"></script>
+<script>
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    if (isIE == true) {
+
+        $('#mymodal').modal({'backdrop': 'static'});
+    }
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', "UA-115547495-1");
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
+{% endif %}
+<script>
+    Cookiebar.init();
+    //jQuery is required to run this code
+    $(document).ready(function () {
+
+        scaleVideoContainer();
+
+        initBannerVideoSize('.video-container .poster img');
+        initBannerVideoSize('.video-container .filter');
+        initBannerVideoSize('.video-container video');
+
+        $(window).on('resize', function () {
+            scaleVideoContainer();
+            scaleBannerVideoSize('.video-container .poster img');
+            scaleBannerVideoSize('.video-container .filter');
+            scaleBannerVideoSize('.video-container video');
+        });
+        $('.text').html(function () {
+            return $(this).html().replace('Privacy Policy', "<a href='cookies-policy'  class='privacy-policy-link' target='_blank'>Privacy Policy</a>");
+        });
+        $(".accept-skip").click(function () {
+            $('.cookiebar').hide();
+        });
+        $('.text').html(function () {
+            return $(this).html().replace('Privacy Policy', "<a href='cookies-policy'  class='privacy-policy-link' target='_blank'>Privacy Policy</a>");
+        });
+        $(".accept-skip").click(function () {
+            $('.cookiebar').hide();
+        });
+    });
+
+    function scaleVideoContainer() {
+
+        var height = $(window).height() + 5;
+        var unitHeight = parseInt(height) + 'px';
+        $('.homepage-hero-module').css('height', unitHeight);
+
+    }
+
+    function initBannerVideoSize(element) {
+
+        $(element).each(function () {
+            $(this).data('height', $(this).height());
+            $(this).data('width', $(this).width());
+        });
+
+        scaleBannerVideoSize(element);
+
+    }
+
+    function scaleBannerVideoSize(element) {
+
+        var windowWidth = $(window).width(),
+            windowHeight = $(window).height() + 5,
+            videoWidth,
+            videoHeight;
+
+        // console.log(windowHeight);
+
+        $(element).each(function () {
+            var videoAspectRatio = $(this).data('height') / $(this).data('width');
+
+            $(this).width(windowWidth);
+
+            if (windowWidth < 1000) {
+                videoHeight = windowHeight;
+                videoWidth = videoHeight / videoAspectRatio;
+                $(this).css({'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px'});
+
+                $(this).width(videoWidth).height(videoHeight);
+            }
+
+            $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+        });
+    }
+
+    $(function () {
+        $(".search-icon").click(function (e) {
+            e.preventDefault();
+            $("#search").toggle();
+        });
+    });
+
+    function closeCK() {
+        $('.cc_banner').hide();
+    }
+
+
+    function newsletter() {
+        var email = $('#email').val();
+        var name = $('#name').val();
+        var str = $('#news-letter').serialize();
+        $.ajax({
+            type: "POST",
+            url: "{{url('/')}}/newsletter",
+            data: str,
+            success: function (msg) {
+                // alert(msg);
+                if (msg == 1) {
+                    $('.name-text').val('');
+                    $('.email-text').val('');
+                    $('.success-msg').html('Thank You For Subscribing!');
+                } else {
+                    $('#email').val('');
+                    $('#name').val('');
+                    $('.success-msg').html('Already signed up');
+                }
+            }
+        });
+        return false;
+    }
+
+    $(document).ready(function () {
+        $('.modal-movie').click(function () {
+            $('#video-play')[0].pause();
+        });
+        $('.modal-movie-event').click(function () {
+            $('#video-play-event')[0].pause();
+        });
+        $('.modal-movie-lms').click(function () {
+            $('#video-play-lms')[0].pause();
+        });
+        $('.modal-movie-management').click(function () {
+            $('#video-play-management')[0].pause();
+        });
+
+
+        $(".no-download").bind('contextmenu', function (e) {
+            return false;
+        });
+
+
+    });
+
+</script>
+
+<script type="text/javascript">
+    $("a.schedule-a-meeting").on("click", function () {
+        var share_link = 'http://calendly.integrass.com/';
+        window.open(share_link, '', 'scrollbars=1,height=500,width=1000,left=300,top=100');
+    });
+
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+
+    $("#contact-enquiry-form").submit(function (event) {
+        if (grecaptcha.getResponse() == "") {
+            event.preventDefault();
+            $('.error-captcha').show().html('Please verify that you are not a robot.');
+        } else {
+            $('.error-captcha').hide().html('');
+            event.preventDefault();
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'post',
+                data: $('#contact-enquiry-form').serialize(),
+                success: function (msg) {
+                    if (msg == 1) {
+                        setTimeout(function () {
+                            $('.alert-success').fadeOut();
+                        }, 2000);
+                        $('#contact-enquiry-form')[0].reset();
+                        $('#success_message').show()
+                        grecaptcha.reset();
+                        $('.error-captcha').hide().html('');
+                    }
+                },
+
+            });
+
+        }
+        return false;
+    });
+    $(function () {
+        setTimeout(function () {
+            $("#successMessage").hide('blind', {}, 500)
+        }, 5000);
+    });
+
+    if (window.location.protocol == "http:") {
+        var restOfUrl = window.location.href.substr(5);
+        window.location = "https:" + restOfUrl;
+    }
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+title = "Offices"
+url = "/company/offices"
+layout = "default"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<section id="about-us-banner" class="wow fadeIn">
+    <div class="container text-left">
+        <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">About Us</h2>
+        <!---<p class="text-capitalize letter-spacing-1 text-white">strategize • execute • manage</p>-->
+    </div>
+</section><!-- #call-to-action -->
+<div class="container-fluid">
+    <div class="container mt-2">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{url('/company/about')}}">Company</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Offices</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Breadcrumps End -->
+<div class="container-fluid">
+    <div class="container">
+        <header class="section-header">
+            <h3>Offices</h3>
+        </header>
+        <div class="bg-white ">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                    <h3>North America</h3></p>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div class="card-deck">
+                            <div class="card border-0">
+                                <img src="{{ 'assets/img/office_images/integrass-orlando.png'|theme }}"
+                                     alt="Integrass Orlando">
+                                <div class="card-body border  border-top-0">
+                                    <h6>Orlando, FL <br>(Head Quarters)</h6>
+                                    <ul class="list-unstyled">
+                                        <li>Ste. 1590</li>
+                                        <li>956 International Parkway</li>
+                                        <li>Lake Mary, FL 32746</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <img src="{{ 'assets/img/office_images/integrass-mt_dora.png'|theme }}"
+                                     alt="Integrass Mount Dora"/>
+                                <div class="card-body border  border-top-0">
+                                    <h6>Mount Dora, FL</h6>
+                                    <ul class="list-unstyled">
+                                        <li>141, Waterman Ave&nbsp;</li>
+                                        <li> Mt. Dora, FL 32757</li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card border-0">
+                                <img src="{{ 'assets/img/office_images/integrass-colorado.png'|theme }}"
+                                     alt="Integrass Colorado">
+                                <div class="card-body border  border-top-0">
+                                    <h6>Colorado Springs, CO</h6>
+                                    <ul class="list-unstyled">
+                                        <li>102 South Tejon Street
+                                        </li>
+                                        <li>Suite 1100, Colorado Springs,</li>
+                                        <li>CO 80903</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p>
+                    <h3>Pacific  <span class="ml-asia d-none d-md-block">Asia</span></h3></p>
+                    <div class="clearfix"></div>
+                    <div class="row">
+
+                        <div class="card-deck">
+                            <div class="card border-0">
+                                <img src="{{ 'assets/img/office_images/integrass-sydney.png'|theme }}"
+                                     alt="Integrass Sydney">
+                                <div class="card-body border  border-top-0">
+                                    <h6>Sydney, New South Wales</h6>
+                                    <ul class="list-unstyled">
+                                        <li>23 Bareena St
+                                        </li>
+                                        <li>Strathfield, New South Wales </li>
+                                        <li>Sydney 2135</li>
+                                        <li>Australia</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 class="d-block d-md-none pl-3">Asia</h3></p>
+                            <div class="clearfix"></div>
+
+                            <div class="card border-0">
+                                <img src="{{ 'assets/img/office_images/integrass-trichy.jpg'|theme }}"
+                                     alt="Integrass Orlando">
+                                <div class="card-body border  border-top-0">
+                                    <h6>Trichy, Tamil Nadu</h6>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            15/9, 6th Main Road
+                                        </li>
+                                        <li>
+                                            Srinivasa Nagar (N)
+                                        </li>
+                                        <li>Trichy 620 017</li>
+                                        <li>Tamil Nadu, India</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+
+                            <div class="card border-0">
+                                <img src="{{ 'assets/img/office_images/integrass-hyderabad.png'|theme }}"
+                                     alt="Integrass Mount Dora">
+                                <div class="card-body border  border-top-0">
+                                    <h6>Hyderabad Telangana </h6>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            8-7-152 / 16A &amp; 16B / 1F </br>R.R. Nagar Main Road</br> Old
+                                            Bowenpally
+                                        </li>
+                                        <li>Hyderabad 500011</li>
+                                        <li>Telangana, India</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <p>
+                    <!--<h3>Asia, Europe, Middle East &amp; Africa</h3></p>-->
+                    <div class="clearfix"></div>
+                    
+                </div>
+                {% partial 'site/about-sec' img='assets/img/about-mission.jpg'|theme alt="About" %}
+            </div>
+        </div>
+    </div>
+</div>
+{% partial 'site/calltoaction' %}

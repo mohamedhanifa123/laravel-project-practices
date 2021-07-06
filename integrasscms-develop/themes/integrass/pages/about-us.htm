@@ -1,0 +1,51 @@
+title = "About us"
+url = "/company/about"
+layout = "default"
+description = "about us"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<section id="about-us-banner" class="wow fadeIn">
+        <div class="container text-left">
+            <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">About Us</h2>
+            <!---<p class="text-capitalize letter-spacing-1 text-white">strategize • execute • manage</p>-->
+        </div>
+    </section><!-- #call-to-action -->
+<div class="container-fluid">
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Breadcrumps End -->
+    <div class="container-fluid">
+        <div class="container">
+        <header class="section-header">
+                            <h3>About Us</h3>
+                        </header>
+            <div class="bg-white ">
+                <div class="row">
+                    <div class="col-md-8">                        
+                        <p class="text-justify letter-spacing-5 animated fadeInDown"><strong>Integrass</strong> has developed lasting relationships with partners, created competitive advantage for clients and has been recognized with industry awards. We create competitive advantage for organizations around the world by implementing customized, end-to-end IT solutions that achieve business success, leveraging leading and emerging platforms in a global delivery model. We have a time-tested, proven track record achieved through our consistent investment in the best skills, proper governance models, and strong business acumen.</p>
+                        <p class="text-justify letter-spacing-5 animated fadeInDown">The key to our success lies in our commitment to innovation coupled with a set of core values that form the foundation of our leadership in core enterprise technologies.</p>
+                        <p class="text-justify letter-spacing-5 animated fadeInDown">Get to know our unique project approach, our leadership team and accolades that exemplify our relentless pursuit of creating value through the use of technology.</p>
+                        <div class="row  mb-5">
+                            <div class="col-md-4 col-4 col-lg-4 col-xl-4">
+                            <img src="{{ 'assets/img/mmbe.png'|theme }}" alt="MWBE"  class="img-fluid opa-8 p-img"/> </div>
+                            <div class="col-md-4 col-md-4 col-4 col-lg-4 col-xl-4">
+                            <img src="{{ 'assets/img/national.png'|theme }}" alt="National"  class="img-fluid opa-8 p-img"/> </div>
+                            <div class="col-md-4 col-md-4 col-4 col-lg-4 col-xl-4">
+                            <img src="{{ 'assets/img/sbdc.png'|theme }}" alt="SBDC"  class="img-fluid opa-5 p-img"/> </div>
+                        </div>
+                    </div>
+                     {% partial 'site/about-sec' img='assets/img/about-mission.jpg'|theme alt="About"  %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% partial 'site/calltoaction' %}

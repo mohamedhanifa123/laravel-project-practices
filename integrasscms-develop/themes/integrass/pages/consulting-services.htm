@@ -1,0 +1,80 @@
+title = "Consulting Services"
+url = "/solutions/consulting-services"
+layout = "default"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<section id="consulting-banner" class="wow fadeIn">
+    <div class="container text-left">
+        <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Consulting Services</h2>
+    </div>
+</section><!-- #call-to-action -->
+<!-- Breadcrumps Start -->
+<div class="container-fluid">
+    <div class="container mt-2">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                <li class="breadcrumb-item"><a href="{{url('/')}}" title="home">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page"><a href="{{url('/solutions/integrass-consulting')}}"
+                                                                   title="Solutions">Solutions</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Consulting Services</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section id="invoation-sec3" class="innovation innovation-3 wow fadeInUp p-0 mb-4" style="min-height:250px;">
+    <header class="section-header">
+        <h3>Consulting Services</h3>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-justify letter-spacing-5 animated fadeInDown">Lorem Ipsum is simply dummy text of the
+                    printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but also the leap into electronic
+                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p class="text-justify letter-spacing-5 animated fadeInDown">Contrary to popular belief, Lorem Ipsum is
+                    not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
+                    over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going
+                    through the cites of the word in classical literature, discovered the undoubtable source. Lorem
+                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of
+                    Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
+                    popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+                    from a line in section 1.10.32.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="offset-2">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <img src="{{ 'assets/img/application-services.png'|theme }}" alt="Application Services"
+                                 class="img-fluid"
+                                 title="Application Services"/>
+                            <p class="mt-3 "><a href="{{url('solutions/application-services')}}"
+                                                class="mt-3"><h3>Application
+                                Services</h3></a></p>
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <img src="{{ 'assets/img/cloud-computing.png'|theme }}" alt="Cloud Services"
+                                 class="img-fluid mr-3"
+                                 title="Cloud Services"/>
+                            <p class="mt-3"><a href="{{url('solutions/application-services')}}"
+                                               class="mt-3"><h3>Cloud
+                                Services</h3></a></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% partial 'site/calltoaction' %}

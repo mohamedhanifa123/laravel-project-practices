@@ -1,0 +1,292 @@
+title = "Contact us"
+url = "/contact/:slug?/"
+layout = "default"
+description = "contact"
+is_hidden = 0
+
+[siteSearchInclude]
+==
+<main id="main">
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="contact-us-banner" class="wow fadeIn">
+        <div class="container text-left">
+            <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Get in touch</h2>
+            <p class="text-capitalize letter-spacing-1 text-white">Contact Us</p>
+        </div>
+    </section><!-- #call-to-action -->
+    <!-- Breadcrumps Start -->
+    <div class="container-fluid">
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white">
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Breadcrumps End -->
+    <div class="container-fluid section-bg">
+
+        <section id="contact" class="section-bg wow fadeInUp">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Contact us</h3>
+                </header>
+                <div class="row contact-info">
+
+                    <div class="col-md-3">
+                        <div class="contact-address">
+                            <i class="ion-ios-paper-outline"></i>
+                            <h3>For press and marketing </h3>
+                            <p><a href="mailto:info@integrass.com" class="email-sec"><img
+                                    src="{{ 'assets/img/emails/info.png'|theme }}" alt="Info"/></a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="contact-phone">
+                            <i class="ion-ios-email-outline"></i>
+                            <h3>For new business</h3>
+                            <p><a href="mailto:sales@integrass.com"><img
+                                    src="{{ 'assets/img/emails/sales.png'|theme }}" alt="sales"/></a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="contact-email">
+                            <i class="ion-ios-list-outline"></i>
+                            <h3>For careers</h3>
+                            <p><a href="mailto:careers@integrass.com"><img
+                                    src="{{ 'assets/img/emails/career.png'|theme }}" alt="Careers"/></a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="contact-email">
+                            <i class="ion-ios-telephone-outline"></i>
+                            <h3>Contact Number</h3>
+                            <p>(855) 297-7575</p>
+                        </div>
+                    </div>
+
+                </div>
+<div class="clearfix"></div>
+                <div class="form">
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div id="errormessage"></div>
+                    <form action="{{url('/contact-form')}}" method="post" class="contactForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" name="name" class="form-control" id="name" required
+                                       placeholder="Your Name"
+                                       data-rule="required" data-msg="Please enter Name"/>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" name="email" required id="email"
+                                       placeholder="Your Email" data-rule="email"
+                                       data-msg="Please enter a valid email id"/>
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" required id="subject"
+                                   placeholder="Subject"
+                                   data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"/>
+                            <div class="validation"></div>
+                        </div>
+                        <input type="hidden" name="sub" value="{{this.param.slug}}"/>
+
+                        {% if this.param.slug == 'findwork' %}
+                        <div class="form-group">
+                            <input type="file" class="form-control" name="file" id="file"
+                                   accept="application/msword,application/pdf" placeholder="Subject"
+                                   data-rule="minlen:4" data-msg="Please select valid file"/>
+                            <div class="validation"></div>
+                        </div>
+                        {% endif %}
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" required rows="5" data-rule="required"
+                                      data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <div class="validation"></div>
+                        </div>
+                        {% if this.environment == 'local' %}
+                        <div class="form-group text-center">
+                            <div class="g-recaptcha" data-sitekey="6LfYkvAUAAAAAEzuftCnjp6ftFa05np6K94VtKIR"></div>
+
+                        </div>
+                        {% endif %}
+                        {% if this.environment == 'dev' %}
+                        <div class="form-group text-center">
+                            <div class="g-recaptcha" data-sitekey="6LecnPUUAAAAAI35Ji4JdN32DXUNk_MwN5Ri5LIY"></div>
+
+                        </div>
+                        {% endif %}
+                        {% if this.environment == 'staging' %}
+                        <div class="form-group text-center">
+                            <div class="g-recaptcha" data-sitekey="6LcRn_UUAAAAAJHD2c4YCHUxTUkAhbTFcURdWTdp"></div>
+
+                        </div>
+                        {% endif %}
+                        {% if this.environment == 'production' %}
+                        <div class="form-group text-center">
+                            <div class="g-recaptcha" data-sitekey="6LcxqfUUAAAAAM3t22TQZqm0EZk7ZXvsJ6FpC7Ik"></div>
+
+                        </div>
+                        {% endif %}
+                        <div class="alert alert-danger hide error-captcha mt-3 mb-3 col-md-3">
+
+                        </div>
+                        <div class="text-center">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="section-header mt-5">
+                    <h3>Location</h3>
+                    <p>Send an email, pick up the phone, follow us on social, or just drop in. </p>
+                </div>
+
+                <div id="accordion" class="accordion-contact mt-5">
+                    <div class="card mb-0">
+                        <div class="card-header collapsed cup" data-toggle="collapse" href="#collapseOne">
+                            <a class="card-title">
+                                <strong>North America </strong>
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="card-body collapse" data-parent="#accordion">
+                            <div class="row">
+                                <div class="col-md-6 ct-h6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Orlando, FL <br>(Head Quarters)</h6>
+                                            <ul class="list-unstyled">
+                                                <li>Ste. 1590</li>
+                                                <li>956 International</li>
+                                                <li> Parkway, Lake Mary</li>
+                                                <li>FL 32746</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ct-h6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Mount Dora, FL</h6>
+                                            <ul class="list-unstyled">
+                                                <li>141, Waterman Ave </li>
+                                                <li> Mt. Dora FL 32757</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ct-h6 mt-3">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Colorado Springs, CO</h6>
+                                            <ul class="list-unstyled">
+                                                <li>102 South Tejon Street
+                                                </li>
+                                                <li>Suite 1100, Colorado Springs</li>
+                                                <li> CO 80903</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>(855) 297-7575</p>
+                        </div>
+                        <div class="card-header collapsed cup" data-toggle="collapse" data-parent="#accordion"
+                             href="#collapseTwo">
+                            <a class="card-title">
+                                <strong>Pacific</strong>
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="card-body collapse cup" data-parent="#accordion">
+                            <div class="row">
+                                <div class="col-md-4 ct-h6">
+                                    <h6>Sydney, New South Wales</h6>
+                                    <ul class="list-unstyled">
+                                        <li>23 Bareena St
+                                        </li>
+                                        <li>Strathfield, New South Wales </li>
+                                        <li>Sydney 2135</li>
+                                        <li>Australia</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-header collapsed cup" data-toggle="collapse" data-parent="#accordion"
+                             href="#collapseThree">
+                            <a class="card-title">
+                                <strong>Asia, Europe, Middle East & Africa</strong>
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse cup" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 ct-h6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Trichy, Tamil Nadu</h6>
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        15/9, 6th Main Road
+                                                    </li>
+                                                    <li>
+                                                        Srinivasa Nagar (N)
+                                                    </li>
+                                                    <li>Trichy 620017,</li>
+                                                    <li>Tamil Nadu, India</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ct-h6">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6>Hyderabad Telangana </h6>
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        8-7-152/16A & 16 B /1F, R.R. Nagar Main Road<br>Old Bowenpally
+                                                    </li>
+                                                    <li>Hyderabad 500011,</li>
+                                                    <li>Telangana, India</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- #contact -->
+    </div>
+</main>

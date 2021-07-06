@@ -1,0 +1,45 @@
+title = "Fobess One Suite"
+url = "/products/fobess-one-suite"
+layout = "default"
+is_hidden = 0
+==
+<section id="fobess-one-banner" class="wow fadeIn">
+    <div class="container text-left">
+        <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Fobess One Suite</h2>
+    </div>
+</section><!-- #call-to-action -->
+<!-- Breadcrumps Start -->
+<div class="container-fluid">
+    <div class="container mt-2">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                <li class="breadcrumb-item"><a href="{{url('/')}}" title="home">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{url('/products')}}" title="home">Products</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Fobess One Suite</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section id="invoation-sec3" class="innovation innovation-3 wow fadeInUp p-0 mb-4" style="min-height:250px;">
+    <header class="section-header">
+        <h3>Fobess One Suite</h3>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <p class="text-justify letter-spacing-5 animated fadeInDown">In a world of digitization, automation, and
+                    the Internet, company performance is becoming synonymous with the ability to use IT not just to
+                    function normally, but to maximize efficiency, revenue and customer satisfaction.</p>
+                <p class="text-justify letter-spacing-5 animated fadeInDown">Small and medium-sized businesses (SMBs)
+                    recognize and want the full utility and value out of IT for digital transformation.
+                </p>
+                <img src="{{ 'assets/img/fobess-one.jpg'|theme }}" alt="DIR Services"
+                     class="img-fluid"
+                     title="DIR Services"/>
+            </div>
+            {% partial 'site/product-sec' img='assets/img/fobess-one-inner.jpg'|theme alt="About" %}
+        </div>
+    </div>
+</section>
+{% partial 'site/calltoaction' %}

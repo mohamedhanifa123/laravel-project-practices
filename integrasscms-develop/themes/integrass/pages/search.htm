@@ -1,0 +1,44 @@
+title = "Search"
+url = "/search-results"
+layout = "default"
+is_hidden = 0
+
+[searchResults]
+resultsPerPage = 100
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<section id="search-banner" class="wow fadeIn">
+        <div class="container text-left">
+            <h2 class="text-white letter-spacing-1 ft-40 font-weight-bold">Search Results</h2>            
+        </div>
+    </section><!-- #call-to-action -->
+    <div class="container-fluid">
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white brcreum-ctum-ct">
+                    <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+<div class="container-fluid">
+<div class="container">
+
+            <p>Search results for <strong>"{{ searchResults.query }}"</strong></p>
+
+
+{% set results = searchResults.results %}
+
+{% for result in results %}
+    {# Display all results #}
+    {% partial searchResults ~ '::searchresult.htm' result = result %}
+{% else %}
+    {# No results found #}
+    {% partial searchResults ~ '::no-results.htm' %}
+{% endfor %}
+</div>
+{% partial searchResults ~ '::pagination.htm' results = results %}
+</div>

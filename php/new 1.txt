@@ -1,0 +1,41 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+if(isset($_POST['name']) && isset($_POST['email']))
+{
+	$name=$_POST['name'];
+	$email=$_POST['Email'];
+	$subject=$_POST['subject'];
+	$body=$_POST['body'];
+	require_once "PHPMailer/PHPMailer.php";
+	require_once "PHPMailer/SMTP.php";
+	require_once "PHPMailer/Exception.php";
+	$mail=new PHPMailer();
+	
+	//smtp setting
+	$mail->isSMTP();
+	$mail->smtp_host="smtp.mailtrap.io";
+	$mail->SMTP Auth=true;
+	$mail->username="f02388dcaa74ce";
+	$mail->password="014aae288eddea";
+	$mail->port=2525;
+	//$mail->SMTP secure="ssl";
+	
+	//email setting
+	$mail->is HTML(true);
+	$mail->setform($email,$name);
+	$mail->add address("mohamedhanifa@integrass.com");
+	$mail->subject=("$email($subject)");
+	$mail->body=$body;
+	if($email->send())
+	{
+		$status="success";
+		$response="Email is sent!";
+	}
+	else{
+		$status="failed";
+		$response="somthing is wrong: <br>" .$mail->Error info;
+	}
+	exit(json_encode(array("status"=>$status,"response"=>$response)));
+
+}
+?>
